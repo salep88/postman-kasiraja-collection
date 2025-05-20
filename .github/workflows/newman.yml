@@ -6,6 +6,7 @@ jobs:
     env:
       UID: ${{ secrets.POSTMAN_UID}}
       API_KEY: ${{ secrets.POSTMAN_API_KEY}}
+      ENV_UID: ${{ secrets.POSTMAN_ENV_UID}}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
