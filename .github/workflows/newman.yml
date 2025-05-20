@@ -1,0 +1,25 @@
+name: Newman Collection CI - KasirAja
+on: [push, workflow_dispatch]
+jobs:
+  newman:
+    runs-on: ubuntu-latest
+    env:
+      UID: ${{ secrets.POSTMAN_UID}}
+      API_KEY: ${{ secrets.POSTMAN_API_KEY}}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "22"
+
+      - name: Install Newman
+        run: npm install -g newman
+
+      - name: Make bash script executable
+        run: chmod +x run_newman.sh
+
+      - name: Run Newman Collection Script
+        run: ./run_newman.sh
