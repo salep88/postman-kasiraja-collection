@@ -1,6 +1,6 @@
 uid="${UID}"
 apiKey="${API_KEY}"
-env_uid="${ENV_UID}
+env_uid="${ENV_UID}"
 
 
 newman run "https://api.getpostman.com/collections/$uid?apikey=$apiKey" \
