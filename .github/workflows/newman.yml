@@ -39,4 +39,4 @@ jobs:
       - name: Check NodeJS version
         run: node -v
       - name: rsync connection
-        run: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc * ${{secrets.USERDEV}}@${{secrets.SERVERDEV}}:/home/unang/pom-kasiraja-github/
+        run: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc * ${{secrets.USERDEV}}@${{secrets.SERVERDEV}}:/home/unang/postman-kasiraja-github/
